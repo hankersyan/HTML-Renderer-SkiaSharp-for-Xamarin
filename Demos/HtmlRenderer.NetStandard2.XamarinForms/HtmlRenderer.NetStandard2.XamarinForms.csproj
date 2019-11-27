@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;-define MONO</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HtmlRenderer.NetStandard2\HtmlRenderer.NetStandard2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="HtmlLabel.cs" />
+    <Compile Update="HtmlPanel.cs" />
+  </ItemGroup>
+
+</Project>
